@@ -1,0 +1,20 @@
+Instructions for Operation.
+
+Step 1: Click on the PassSentence icon next to the address bar in the Google Chrome browser.
+Step 2: Click on the 'Sign Up' button.
+Step 3: Enter your desired username.
+Step 4: Click 'Create New Password' button.
+Step 5: Follow the on-screen instructions to set the parameters of the password and then click 'Create'.
+Step 6: If you're happy with the generated password click on the 'Save to Database' button, otherwise click the 'Generate Another' button until you have a password you are happy with then click the 'Save to Database' button.
+Step 7: If you wish to generate another password click 'Create another password' button and repeat steps 5 and 6. Otherwise, if you wish to display the passwords within your database click on the 'View Your Existing Passwords' button.
+Step 8: Here your passwords are displayed in their encoded format. To view the plain text versions of your password/s simply enter your PassSentence in the designated area and click the 'Submit' button. This will decode your passwords and display them in plaintext to allow you to copy and paste them onto the appropriate website login page.
+Step 9: If you wish to delete a password; simply click on the 'Delete *Website*' button in the appropriate row of the table.
+
+ATTENTION: The key security function to this piece of software is that your PassSentence is never saved. It is, therefore, the responsibility of the user to ensure that the PassSentence in entered correctly each time. An incorrect PassSentence may create incorrect passwords.
+
+NOTE: If you accidentally create a duplicate password for a particular account (Gmail for example), the passwords are displayed in chronological order: therefore the password you created first would be closer to the top. If you wish to delete the first copy of the password then: delete the one closest to the top but if you want to delete the newest version of the password: delete the one closest to the bottom. 
+
+This concludes the instructions for operation.
+I hope you enjoy using my Browser Plugin.
+
+Thanks for reading and have a Great Day!

@@ -1,0 +1,31 @@
+<!doctype HTML>
+<HTML lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PassSentence</title>
+		<meta name="description" content="PassSentence Password Manager">
+		<meta name="author" content="Dale Stubbs - 14024149">
+		<script src="popup.js"></script>
+		<link rel="stylesheet" href="html/css/style1.css">
+	</head>
+	<body>
+			<div id="container">
+				<div id="header">
+					<img src="html/PassSentenceTitle.png">
+				</div>
+				<div id="top">
+					<h1>Welcome to PassSentence</h1>
+					<form name='popup' autocomplete="off" action="html/existingUser.html" method="POST">
+						<label for="loginBox">Enter Your Username:</label>
+						<input name='logBox' type="text" id="loginBox" placeholder="Username" required="required" validate='true'><br>
+						<input type="submit" id="loginButton" value="Login"/>
+						<p>---------- or ----------</p>
+					</form>
+					<a href="html/signup.html" id="signUpLink"><input type='button' value='Sign Up'></a><br><br>
+					<div id='Warning'>
+					<p><strong>WARNING:</strong> Clicking 'Sign Up' will clear the database of all current passwords</p>
+					</div>
+				</div>
+			</div>
+	</body>
+</HTML>

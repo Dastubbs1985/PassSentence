@@ -1,0 +1,14 @@
+Instructions for installation.
+
+Step 1: Download the .zip file.
+Step 2: Unzip the file to a folder on the Desktop.
+Step 3: Load the 'Google Chrome' Browser.
+Step 4: Click on the 3 dots in the top right corner of the browser (Just under the 'Close' button in the top right corner).
+Step 5: Navigate to the 'Extensions' page.
+Step 6: Enable 'Developer Mode'.
+Step 7: Click on the 'Load unpacked extension...' button and navigate to the folder on the desktop created in Step 2.
+
+
+PassSentence in now ready for use.
+
+Please read the Instructions for Use file for detailed steps on how to use the Plug In.

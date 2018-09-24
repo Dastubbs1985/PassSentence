@@ -1,0 +1,23 @@
+ {
+	"manifest_version": 2,
+	"name": "PassSentence",
+	"description": "Welcome to PassSentence. This is a browser plug-in Password Manager. Use it to store all of your passwords so your memory is free to remember everything else!",
+	"version": "1.0",
+	"browser_action": {
+		"default_icon": "images/icon16.png",
+		"default_title": "PassSentence",
+		"default_popup": "popup.html"
+	},
+	 "background": {
+    "scripts": ["javascriptFunctions.js"]
+  	},
+	"icons": { 
+		"16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png" 
+    },
+	"permissions": [
+          "http://localhost/*",
+          "storage"
+        ]
+}

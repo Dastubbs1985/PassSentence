@@ -1,0 +1,28 @@
+<!doctype HTML>
+<HTML lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PassSentence</title>
+		<meta name="description" content="PassSentence Password Manager">
+		<meta name="author" content="Dale Stubbs - 14024149">
+		<script src="JavaScript/pass.js"></script>
+		<link rel="stylesheet" href="css/style1.css">
+	</head>
+	<body>
+			<div id="container">
+				<div id="header">
+					<img src="images/PassSentenceTitle.png">
+				</div>
+				<div id="top">
+					<h2 id="webPass">Website Password</h2>
+					<label for="plainTextPass">Plain Text:</label><br>
+					<input type='text' id="plainTextPass" readonly/><br><br>
+					<label for="encodedPass">Encoded Text as <br>Stored in PassSentence:</label>
+					<input type='text' id="encodedPass" readonly/><br><br>
+					<input type="button" id="generatePass" value="Generate Another"/>
+					<p>---------- or ----------</p>
+					<a href="saved.html"><input type="button" id="savePass" value="Save To Database"/></a> 
+				</div>
+			</div>
+	</body>
+</HTML>

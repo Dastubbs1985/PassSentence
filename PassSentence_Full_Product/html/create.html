@@ -1,0 +1,33 @@
+<!doctype HTML>
+<HTML lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PassSentence</title>
+		<meta name="description" content="PassSentence Password Manager">
+		<meta name="author" content="Dale Stubbs - 14024149">
+		<script src="create.js"></script>
+		<link rel="stylesheet" href="css/style1.css">
+	</head>
+	<body>
+			<div id="container">
+				<div id="header">
+					<img src="PassSentenceTitle.png">
+				</div>
+				<div id="top">
+					<form action="pass.html" autocomplete="off" method="POST">
+						<p><strong>ATTENTION:</strong> PassSentence must contain a minimum of 20 characters (spaces not included) and at least one Upper Case letter</p>
+						<label for="passSentenceBox">Enter your PassSentence:</label>
+						<input type='text' spellcheck="false" id="passSentenceBox" required><br><br>
+						<label for="websiteBox">Enter The Website Name:</label>
+						<input type='text' id="websiteBox" required><br><br>
+						<label for="numbersRadio">Are Numbers Allowed?</label><br>
+						<input type="radio" name="number" id="number_yes" value="Yes" checked="checked"><label> Yes</label>
+						<input type="radio" name="number" id="number_no" value="No"> <label> No</label><br>
+						<label for="specCharRadio">Are Special Characters Allowed?</label><br>
+						<input type="radio" name="specChar" id="specChar_yes" value="Yes" checked="checked"><label> Yes</label>
+						<input type="radio" name="specChar" id="specChar_no" value="No"><label> No</label><br><br>
+						<input type="submit" id="create" value="Create">
+					</form>
+				</div>
+	</body>
+</HTML>

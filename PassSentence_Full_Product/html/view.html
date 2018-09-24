@@ -1,0 +1,27 @@
+<!doctype HTML>
+<HTML lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PassSentence</title>
+		<meta name="description" content="PassSentence Password Manager">
+		<meta name="author" content="Dale Stubbs - 14024149">
+		<script src="view.js"></script>
+		<link rel="stylesheet" href="css/style1.css">
+	</head>
+	<body>
+			<div id="container">
+				<div id="header">
+					<img src="PassSentenceTitle.png">
+				</div>
+				<div id="top">
+					<h2>Passwords for Username:</h2>
+					<label for="passSentence">Enter Your PassSentence to View Passwords in Plain Text: </label><br>
+					<textarea id="passSentence" placeholder="PassSentence" required="required" validate="true" spellcheck="false"></textarea><br><br>
+					<input type="submit" id="view" value="Submit"/><br><br>
+					<table border='1' id="passwordTable">
+					</table><br>
+					<a href="create.html" id="createLink"><input type='button' value='Create another password'></a><br><br>
+				</div>
+			</div>
+	</body>
+</HTML>

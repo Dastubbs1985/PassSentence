@@ -1,0 +1,130 @@
+#container {
+	display: block;
+	height: 400px;
+    width: 300px;
+	background: #fcd69c;
+	overflow: auto;
+}
+
+#header {
+	position: relative;
+	width: 98%;
+	height: 23.75%;
+	left: 1%;
+	text-align: center;
+	padding: 5px auto;
+	margin: 5 px auto;
+}
+
+#top {
+	position: relative;
+	width: 98%;
+	height: 23.75%;
+	left: 1%;
+	top: -10%;
+	text-align: center;
+	margin: auto;
+}
+
+#bottom {
+	position: relative;
+	width: 98%;
+	height: 23.75%;
+	left: 1%;
+	top: 15%;
+	text-align: center;
+	margin: auto;
+}
+
+#footer {
+	position: relative;
+	width: 98%;
+	height: 23.75%;
+	left: 1%;
+	top: 2%;
+	text-align: center;
+	margin: auto;
+	bottom: 5px;
+}
+
+img {
+	background-position: center center;
+	display: block;
+    margin: 5px auto;
+}
+
+#loginBox {
+	text-align: start;
+	display: block;
+	margin: auto;
+}
+
+#loginButton, #confirm, #create{
+	display: block;
+	font-size: 15px;
+	margin: auto;
+}
+
+#createPass, #viewPass, #generatePass, #savePass {
+	width: auto;
+    font-size: 15px;
+    margin: auto;
+}
+
+#passwordTable {
+	width: 95%;
+	background: white;
+	bottom: 2%;
+}
+
+td {
+	font-family: Arial;
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+}
+
+th {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+}
+
+#passSentence {
+	width: auto;
+    height: 30px;
+    resize: none;
+    font-style: normal;
+    font-size: 15px;
+    line-height: normal;
+    font-family: Arial;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+label {
+	font-size: 15px;
+	font-family: Arial;
+}
+
+p {
+	font-size: 15px;
+	font-family: Arial;
+}
+
+input {
+	font-size: 15px;
+	font-family: Arial;
+}
+
+#Warning {
+	background-color: yellow;
+	border-color: black;
+	border-style: solid;
+}
