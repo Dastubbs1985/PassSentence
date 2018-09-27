@@ -13,16 +13,19 @@
 import random
 import sys
 import os.path
-
+import os
 #  Required Global Variables.
+userinput = ''
 user = ''
 passCharPlace = []
 website = ''
 passSentence = []
+os.system('cls')
 print 'Welcome to my PassSentence Manager.'
 def main():
 	print '\nWould you like to (l)ogin or (s)ignup?: '
 	option = raw_input()
+	quitCheck(option)
 	global user
 	if option == 's':
 		#  This section creates a new user based on the input Username.
@@ -30,6 +33,7 @@ def main():
 		#  and ensure that all usernames are unique.
 		print 'Please enter your user name: '
 		user = raw_input()
+		quitCheck(user)
 		filename = user + '.txt'
 		createUser(filename)
 		print 'The sentence you select will be used to generate all of your passwords. \nIt must be a minimum of 20 characters long in order to create all of your required passwords. Your chosen sentence requires only letters as the program will add any additional characters required. Your letters must be a mixture of upper and lower case letters.'
@@ -38,6 +42,7 @@ def main():
 			print 'Please enter your PassSentence: '
 			global passSentence
 			passSentence = raw_input()
+			quitCheck(passSentence)
 			size = len(passSentence)
 			upperCase = [l for l in passSentence if l.isupper()]
 			#  Ensures the length and contents of the PassSentence meet the rules outlined above.
@@ -52,7 +57,8 @@ def main():
 		x = 0
 		while x == 0:
 			print 'Please enter your user name: '
-			user = raw_input()
+			user = raw_input() + '.txt'
+			quitCheck(user)
 			#  Checks to see if the username actually exists.
 			if os.path.isfile(user):
 				x = 1
@@ -61,10 +67,12 @@ def main():
 				continue
 		print 'Please enter your PassSentence: '
 		passSentence = raw_input()
+		quitCheck(passSentence)
 		x = 0
 		while x == 0:
 			print 'Would you like to (c)reate a new password or (v)iew your existing passwords? '
 			sel = raw_input()
+			quitCheck(sel)
 			if sel == 'c':
 				x = 1
 				createPassword()
@@ -77,6 +85,7 @@ def createPassword():
 	print 'What is the website where the generated password will be used? '
 	global website 
 	website = raw_input()
+	quitCheck(website)
 	size = len(passSentence)
 	generatedSentence = EditSentence(passSentence)
 	generatePassword(generatedSentence, passSentence, size)
@@ -101,6 +110,7 @@ def generatePassword(generatedSentence, passSentence, size):
 		#  Allows for the user to generate a new password if they're not happy with the first one displayed.
 		print 'Are you happy with the provided password? (y/n)'
 		choice = raw_input()
+		quitCheck(choice)
 		if choice == 'n':
 			y = 1
 			generatePassword(generatedSentence, passSentence, size)
@@ -113,6 +123,7 @@ def generatePassword(generatedSentence, passSentence, size):
 	while x == 0:
 		print 'Would you like to (c)reate another password, (v)iew your current passwords or (e)xit the program?'
 		choice = raw_input()
+		quitCheck(choice)
 		if choice == 'c':
 			x = 1
 			createPassword()
@@ -152,6 +163,7 @@ def EditSentence(passSentence):
 	while x == 0:
 		print 'Does the password require a number? (y/n)'
 		selection = raw_input()
+		quitCheck(selection)
 		if selection == 'y':
 			x = 1
 			numbers = '0123456789'
@@ -164,6 +176,7 @@ def EditSentence(passSentence):
 	while y == 0:
 		print 'Does the password require a special character? (y/n)'
 		selection  = raw_input()
+		quitCheck(selection)
 		if selection == 'y':
 			y = 1
 			sCharacters = '|{_@&'
@@ -190,7 +203,7 @@ def viewPasswords():
 	#  This function allows the user to see their existing passwords in the file. This will allow them to copy and paste their password in the necessary webpage.
 	global passSentence
 	passwords = []
-	with open(user + '.txt', 'rb') as file:
+	with open(user, 'rb') as file:
 		for line in file.readlines():
 			if 'Passwords' in line:
 				continue
@@ -202,6 +215,7 @@ def viewPasswords():
 	if len(passSentence) == 0:
 		print 'To view the text version of your passwords please enter your PassSentence: '
 		passSentence = raw_input()
+		quitCheck(passSentence)
 	passCharacters = []
 	for x in range(len(passwords)):
 		line = passwords[(x)]
@@ -234,12 +248,13 @@ def viewPasswords():
 	while x == 0:
 		print 'Would you like to (c)reate a new password or (e)xit the program?'
 		choice = raw_input()
+		quitCheck(choice)
 		if choice == 'c':
 			x = 1
 			createPassword()
 		elif choice == 'e':
 			x = 1
-			sys.exit()
+			exit()
 		else:
 			print 'Choice not recognised. Please enter a \'c\' or an \'e\' to continue.'
 def createUser(filename):
@@ -247,6 +262,10 @@ def createUser(filename):
 	with open(filename, 'w') as f:
 		f.write('Passwords for ' + user)
 		f.close()
-
+def exit():
+	sys.exit()
+def quitCheck(userInput):
+	if (userInput == 'quit') or (userInput == 'q'):
+		exit()
 if __name__ == "__main__":
     main()
